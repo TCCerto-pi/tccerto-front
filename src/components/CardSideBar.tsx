@@ -20,8 +20,10 @@ export default function CardSideBar({
     <Link href={nav}>
       <div>
         <button
-          className={`flex h-14 w-full flex-row items-center justify-start rounded-2xl pl-3 bg-main ${
-            isActive ? "shadow-lg shadow-shadow-blue" : "shadow"
+          className={`flex h-14 w-full flex-row items-center justify-start rounded-2xl pl-3 ${
+            isActive
+              ? "shadow-lg bg-white text-main"
+              : "shadow-white/30  shadow-md"
           }`}
         >
           {isActive ? (

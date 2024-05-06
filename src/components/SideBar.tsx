@@ -1,66 +1,54 @@
 "use client";
 import Link from "next/link";
 
-import {
-  Card,
-  Category,
-  ClipboardExport,
-  ClipboardTick,
-  Cup,
-  Flash,
-  Home2,
-  LogoutCurve,
-  Note,
-  Personalcard,
-  Rank,
-  TagUser,
-} from "iconsax-react";
+import { ClipboardTick } from "iconsax-react";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import CardSideBar from "./CardSideBar";
 
 export default function SideBar() {
+  const pathname = usePathname();
   const cardSideBar = [
     {
-      href: "/dashboard",
-      icon1: <ClipboardTick size="20" color="main" variant="Bold" />,
+      href: "/",
+      icon1: <ClipboardTick size="20" color="#FFFFFF" variant="Bold" />,
       icon2: <ClipboardTick size="22" color="#FFFFFF" variant="Bold" />,
       label: "Início",
     },
     {
-      href: "/personal",
-      icon1: <ClipboardTick size="22" color="main" variant="Bold" />,
-      icon2: <ClipboardTick size="22" color="#FFFFFF" variant="Bold" />,
+      href: "/formatting",
+      icon1: <ClipboardTick size="22" color="#FFFFFF" variant="Bold" />,
+      icon2: <ClipboardTick size="22" color="main" variant="Bold" />,
       label: "Formatação ABNT",
     },
     {
       href: "/student",
-      icon1: <ClipboardTick size="22" color="main" variant="Bold" />,
-      icon2: <ClipboardTick size="22" color="#FFFFFF" variant="Bold" />,
+      icon1: <ClipboardTick size="22" color="#FFFFFF" variant="Bold" />,
+      icon2: <ClipboardTick size="22" color="main" variant="Bold" />,
       label: "Referências ABNT",
     },
     {
       href: "/exercises",
-      icon1: <ClipboardTick size="22" color="main" variant="Bold" />,
-      icon2: <ClipboardTick size="22" color="#FFFFFF" variant="Bold" />,
+      icon1: <ClipboardTick size="22" color="#FFFFFF" variant="Bold" />,
+      icon2: <ClipboardTick size="22" color="main" variant="Bold" />,
       label: "Correção de texto",
     },
     {
       href: "/categorias",
-      icon1: <ClipboardTick size="22" color="main" variant="Bold" />,
-      icon2: <ClipboardTick size="22" color="#FFFFFF" variant="Bold" />,
+      icon1: <ClipboardTick size="22" color="#FFFFFF" variant="Bold" />,
+      icon2: <ClipboardTick size="22" color="main" variant="Bold" />,
       label: "Melhora de escrita",
     },
     {
       href: "/payment",
-      icon1: <ClipboardTick size="22" color="main" variant="Bold" />,
-      icon2: <ClipboardTick size="22" color="#FFFFFF" variant="Bold" />,
+      icon1: <ClipboardTick size="22" color="#FFFFFF" variant="Bold" />,
+      icon2: <ClipboardTick size="22" color="main" variant="Bold" />,
       label: "Coerência de TCC",
     },
     {
       href: "/payment",
-      icon1: <ClipboardTick size="22" color="main" variant="Bold" />,
-      icon2: <ClipboardTick size="22" color="#FFFFFF" variant="Bold" />,
+      icon1: <ClipboardTick size="22" color="#FFFFFF" variant="Bold" />,
+      icon2: <ClipboardTick size="22" color="main" variant="Bold" />,
       label: "Inspiração de TCC",
     },
   ];
@@ -88,7 +76,7 @@ export default function SideBar() {
               iconOff={cardSideBarItem.icon1}
               iconOn={cardSideBarItem.icon2}
               nav={cardSideBarItem.href}
-              isActive={cardSideBarItem.href}
+              isActive={pathname === cardSideBarItem.href}
             />
           ))}
         </div>
