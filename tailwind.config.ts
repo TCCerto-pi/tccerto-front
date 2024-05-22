@@ -13,6 +13,7 @@ const config: Config = {
         white: "#FFFFFF",
         "shadow-blue": "#6D8FFF",
         black: "#000000",
+        "blue-shadow": "#6D8FFF",
       },
     },
   },

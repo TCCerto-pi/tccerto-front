@@ -54,8 +54,8 @@ export default function SideBar() {
   ];
 
   return (
-    <main className="flex flex-1 flex-row bg-main w-fit rounded-r-xl shadow-2xl shadow-main">
-      <div className="flex h-full min-h-screen w-fit flex-col items-center justify-start rounded-xl px-8">
+    <main className="flex w-72 flex-col bg-main rounded-r-xl shadow-2xl">
+      <div className="flex h-full w-full min-h-screen flex-col items-center justify-start rounded-xl px-8">
         <div className="">
           <Link href={"/dashboard"}>
             <Image
@@ -63,12 +63,12 @@ export default function SideBar() {
               alt="Logo"
               width={100}
               height={96}
-              className="mt-12 mb-16 flex"
+              className="mt-12 mb-12 flex"
             />
           </Link>
         </div>
 
-        <div className="flex h-full w-72 flex-col xl:gap-3 2xl:gap-6">
+        <div className="flex h-full w-full flex-col gap-y-4 ">
           {cardSideBar.map((cardSideBarItem, index) => (
             <CardSideBar
               key={index}
